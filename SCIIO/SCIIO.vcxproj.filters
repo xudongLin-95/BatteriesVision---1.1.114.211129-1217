@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="IOCommunicate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMInclude\DH_HalconEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SCIIO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgIOSet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMInclude\Language.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IOCommunicate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SCIIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SCIIODefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgIOSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\pause.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="SCIIO.def">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\SCIIO.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\set.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\w_check.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\w_live.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\w_uncheck.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{68a0e0d9-598b-438b-8427-fec831bf86d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{52150aa1-c7f3-4ecf-8a8f-1aa014d2f531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{11e8a8d7-2f26-4f1f-aaa7-0c34e436d6c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SCIIO.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

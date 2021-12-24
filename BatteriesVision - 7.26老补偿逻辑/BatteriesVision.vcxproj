@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{33B69FFD-B153-4828-98C6-2C0FACEDC49F}</ProjectGuid>
+    <RootNamespace>BatteriesVision</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\Run-x64/</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Include;../COMInclude;../COMInclude/Halcon;../COMInclude/Halcon/HalconCpp;../COMInclude/SCIInterFace;../COMInclude\BCGCBPro;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm150</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <StringPooling>false</StringPooling>
+      <CompileAsManaged>false</CompileAsManaged>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\COMLib\x64;Lib\x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>BCGCBPRO2800d100.lib;halconcppxl.lib;</AdditionalDependencies>
+      <OutputFile>../../Run-x64/BatteriesVision.exe</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\BatteriesVision.ico" />
+    <None Include="res\BatteriesVision.rc2" />
+    <None Include="res\logo_y_512_512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AlgorithmTool.h" />
+    <ClInclude Include="BaseTmpl.h" />
+    <ClInclude Include="BatteriesVision.h" />
+    <ClInclude Include="BatteriesVisionDlg.h" />
+    <ClInclude Include="Callback.h" />
+    <ClInclude Include="CoatSketchStatic.h" />
+    <ClInclude Include="CommunicationTool.h" />
+    <ClInclude Include="Counter.h" />
+    <ClInclude Include="CxStatic.h" />
+    <ClInclude Include="DataCalculate.h" />
+    <ClInclude Include="DataFilter.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="DlgAlarm.h" />
+    <ClInclude Include="DlgAlarmSet.h" />
+    <ClInclude Include="DlgAutoMatic.h" />
+    <ClInclude Include="DlgDataFilterSet.h" />
+    <ClInclude Include="DlgIPSet.h" />
+    <ClInclude Include="DlgK.h" />
+    <ClInclude Include="DlgLoading.h" />
+    <ClInclude Include="DlgManualMatic.h" />
+    <ClInclude Include="DlgSemiAutoMatic.h" />
+    <ClInclude Include="DlgSimulateSet.h" />
+    <ClInclude Include="DlgTip.h" />
+    <ClInclude Include="ErrorInfo.h" />
+    <ClInclude Include="FoolProofing.h" />
+    <ClInclude Include="Judge.h" />
+    <ClInclude Include="Language.h" />
+    <ClInclude Include="MSA.h" />
+    <ClInclude Include="PageAlgSet.h" />
+    <ClInclude Include="PageCameraSet.h" />
+    <ClInclude Include="PageCommunicationSet.h" />
+    <ClInclude Include="PageDispList.h" />
+    <ClInclude Include="PageDispList2.h" />
+    <ClInclude Include="PageDispList3.h" />
+    <ClInclude Include="PageDispList4.h" />
+    <ClInclude Include="PageOtherSet.h" />
+    <ClInclude Include="PageProductSet.h" />
+    <ClInclude Include="PageStorageSet.h" />
+    <ClInclude Include="PageSystemSet.h" />
+    <ClInclude Include="ProgressCtrlExt.h" />
+    <ClInclude Include="Project.h" />
+    <ClInclude Include="Speed.h" />
+    <ClInclude Include="SubDispSetting.h" />
+    <ClInclude Include="DlgSwitchBatch.h" />
+    <ClInclude Include="DlgViewLog.h" />
+    <ClInclude Include="OScopeCtrl.h" />
+    <ClInclude Include="Permission.h" />
+    <ClInclude Include="SubDispList.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="GrabberTool.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Process.h" />
+    <ClInclude Include="ProductTool.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Storage.h" />
+    <ClInclude Include="SubDispScope.h" />
+    <ClInclude Include="SubMainDisp.h" />
+    <ClInclude Include="TabCtrlExt.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+    <ClInclude Include="TitleStatic.h" />
+    <ClInclude Include="Upload.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\COMInclude\BaseFunction.cpp" />
+    <ClCompile Include="..\COMInclude\DH_HalconEx.cpp" />
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AlgorithmTool.cpp" />
+    <ClCompile Include="BaseTabCtrl.cpp" />
+    <ClCompile Include="BaseTmpl.cpp" />
+    <ClCompile Include="BatteriesVision.cpp" />
+    <ClCompile Include="BatteriesVisionDlg.cpp" />
+    <ClCompile Include="Callback.cpp" />
+    <ClCompile Include="CoatSketchStatic.cpp" />
+    <ClCompile Include="CommunicationTool.cpp" />
+    <ClCompile Include="Counter.cpp" />
+    <ClCompile Include="CustomProperties.cpp" />
+    <ClCompile Include="CxStatic.cpp" />
+    <ClCompile Include="DataCalculate.cpp" />
+    <ClCompile Include="DataFilter.cpp" />
+    <ClCompile Include="DlgAlarm.cpp" />
+    <ClCompile Include="DlgAlarmSet.cpp" />
+    <ClCompile Include="DlgAutoMatic.cpp" />
+    <ClCompile Include="DlgDataFilterSet.cpp" />
+    <ClCompile Include="DlgIPSet.cpp" />
+    <ClCompile Include="DlgK.cpp" />
+    <ClCompile Include="DlgLoading.cpp" />
+    <ClCompile Include="DlgManualMatic.cpp" />
+    <ClCompile Include="DlgSemiAutoMatic.cpp" />
+    <ClCompile Include="DlgSimulateSet.cpp" />
+    <ClCompile Include="DlgTip.cpp" />
+    <ClCompile Include="ErrorInfo.cpp" />
+    <ClCompile Include="FoolProofing.cpp" />
+    <ClCompile Include="Judge.cpp" />
+    <ClCompile Include="Language.cpp" />
+    <ClCompile Include="MSA.cpp" />
+    <ClCompile Include="PageAlgSet.cpp" />
+    <ClCompile Include="PageCameraSet.cpp" />
+    <ClCompile Include="PageCommunicationSet.cpp" />
+    <ClCompile Include="PageDispList.cpp" />
+    <ClCompile Include="PageDispList2.cpp" />
+    <ClCompile Include="PageDispList3.cpp" />
+    <ClCompile Include="PageDispList4.cpp" />
+    <ClCompile Include="PageOtherSet.cpp" />
+    <ClCompile Include="PageProductSet.cpp" />
+    <ClCompile Include="PageStorageSet.cpp" />
+    <ClCompile Include="PageSystemSet.cpp" />
+    <ClCompile Include="ProgressCtrlExt.cpp" />
+    <ClCompile Include="Project.cpp" />
+    <ClCompile Include="Speed.cpp" />
+    <ClCompile Include="SubDispSetting.cpp" />
+    <ClCompile Include="DlgSwitchBatch.cpp" />
+    <ClCompile Include="DlgViewLog.cpp" />
+    <ClCompile Include="OScopeCtrl.cpp" />
+    <ClCompile Include="Permission.cpp" />
+    <ClCompile Include="SubDispList.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="GrabberTool.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Process.cpp" />
+    <ClCompile Include="ProductTool.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Storage.cpp" />
+    <ClCompile Include="SubDispScope.cpp" />
+    <ClCompile Include="SubMainDisp.cpp" />
+    <ClCompile Include="TabCtrlExt.cpp" />
+    <ClCompile Include="tinystr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TitleStatic.cpp" />
+    <ClCompile Include="Upload.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BatteriesVision.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BatteriesVision.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
