@@ -233,6 +233,11 @@ void CAboutDlg::RefreshVersionInfo()
 		"\t2.开启瑕疵双击弹窗参数界面；\n"
 		"\t3.产品参数界面：新加K补偿/手动补偿/半自动补偿功能；\n\n";
 
+	strInfo += "---------------Version 1.0.69.211217---------------\n"
+		"\t1.配方中分离点检模块；\n"
+		"\t2.增加数据表走带速度；\n"
+		"\t3.增加膜卷号、品种号、版本号写入上传；\n\n";
+
 	m_EDIT_UpdateInfo.SetWindowTextA(strInfo);
 }
 
